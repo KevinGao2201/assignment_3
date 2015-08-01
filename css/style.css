@@ -1,0 +1,27 @@
+/*the UNICLO CALENDAR*/
+
+object{
+    display: none;
+}
+#calendar{
+    position: absolute;
+    top: -320px;
+    right: 0px;
+    overflow: hidden;
+    background-color: #222;
+    width: 160px;
+    height: 380px;
+    line-height: 0;
+    transition: 0.4s;
+}
+#calendar:hover{
+    height: 320px;
+    top: 0;
+}
+#calendar p{
+    font-family: 'open sans', sans-serif;
+    text-align: center;
+    font-size: 0.5em;
+    line-height: 60px;
+    color: white;
+}
