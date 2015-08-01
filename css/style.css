@@ -3,8 +3,12 @@ body, html{
     overflow: hidden;
     color: #222;
 }
-body{
-    
+.hungry_div{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-55%);
+    transform: translateY(-55%);
 }
 header{
     display: block;
@@ -90,8 +94,8 @@ main h2{
 
 /*the UNICLO CALENDAR*/
 
-object{
-    display: none;
+#calendar{
+/*    display: none;*/
 }
 #calendar{
     position: absolute;
@@ -99,18 +103,19 @@ object{
     right: 0px;
     overflow: hidden;
     background-color: #222;
-    width: 160px;
+    width: 60px;
     height: 380px;
     line-height: 0;
     transition: 0.4s;
 }
 #calendar:hover{
     height: 320px;
+    width: 160px;
     top: 0;
 }
 #calendar p{
     text-align: center;
-    font-size: 0.5em;
+    font-size: 0.75rem;
     line-height: 60px;
     color: white;
 }
