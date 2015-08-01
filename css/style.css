@@ -1,6 +1,26 @@
-body{
+body, html{
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
-    counter-reset: section;
+    overflow: hidden;
+    color: #222;
+}
+h1{
+    font-size: 3rem;
+    margin: 10px 0 20px 15px;
+}
+h1+p{
+    font-weight: 700;
+    font-size: 1.5em;
+    margin: 0 0 0 17px;
+}
+main{
+    max-width: 960px;
+}
+#list{
+    margin: 0 -9999rem;
+    /* add back negative margin value */
+    padding: 0 9999rem 40%;
+    background: #222;
+    color: white;
 }
 .wrapper{
     position: relative;
@@ -9,7 +29,8 @@ body{
     padding-bottom: 20%;
     overflow: hidden;
     float: left;
-    background-color: aliceblue;
+    background-color: #222;
+    color: white;
 }
 .wrapper div{
     display: block;
@@ -30,6 +51,10 @@ body{
 }
 .wrapper h3{
     margin-top: 100%;
+    position: relative;
+    padding-top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     transition: 0.3s;
 }
 .wrapper>p{
@@ -40,10 +65,11 @@ body{
     opacity: 1; 
 }
 .wrapper:hover div{
-    top: -100%;
+    top: -10%;
+    opacity: 0;
 }
 .wrapper:hover h3{
-    margin-top: 0;
+    margin-top: 25%;
 }
 
 
