@@ -142,48 +142,47 @@ main h2{
 }
 
 /*after clicking the number*/
-{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
-header{
+header.activate{
     opacity: 0;
 }
-.hungry_div{
+.hungry_div.activate{
     top: 50%;
     -webkit-transform: translateY(-60%);
     transform: translateY(-60%);
 }
-main h2{
+main. h2{
     font-size: 4rem;
 }
-main h2 span{
+main.activate h2 span{
     opacity: 0;
 }
-.wrapper:not(:first-child){
+.wrapper.hidden{
     padding: 0;
     width: 0;
     opacity: 0;
     display: none;
 }
-.wrapper:first-child{
+.wrapper.activate{
     opacity: 1;
     width: 100%;
     padding-bottom: 40%;
     background-color: #222;
 }
-.wrapper:first-child div p{
+.wrapper.activate div p{
     left: -45%;
     top: -50%;
     transition: 0.3s 1.3s;
 }
-.wrapper:first-child div{
+.wrapper.activate div{
     top: -10%;
     opacity: 0;
 }
-.wrapper:first-child h3{
+.wrapper.activate h3{
     margin-top: -20%;
     font-size: 2rem;
     left: 8px;
 }
-.wrapper>p{
+.wrapper.activate>p{
     opacity: 1;
     font-size: 1rem;
     margin-top: -20%;
