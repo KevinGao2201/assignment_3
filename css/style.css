@@ -71,6 +71,7 @@ main h2{
     float: left;
     background-color: #222;
     color: white;
+    transition: none;
 }
 .wrapper div{
     display: block;
@@ -97,6 +98,7 @@ main h2{
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     line-height: 1.2;
+    display: inline-block;
     transition: 0.5s;
 }
 .wrapper>p{
@@ -140,7 +142,7 @@ main h2{
 }
 
 /*after clicking the number*/
-
+{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}
 header{
     opacity: 0;
 }
@@ -155,12 +157,11 @@ main h2{
 main h2 span{
     opacity: 0;
 }
-#list{
-/*    width: 70%;*/
-}
 .wrapper:not(:first-child){
     padding: 0;
-    transition: 0.3s 1s;
+    width: 0;
+    opacity: 0;
+    display: none;
 }
 .wrapper:first-child{
     opacity: 1;
@@ -170,7 +171,8 @@ main h2 span{
 }
 .wrapper:first-child div p{
     left: -45%;
-    top: -50%
+    top: -50%;
+    transition: 0.3s 1.3s;
 }
 .wrapper:first-child div{
     top: -10%;
@@ -188,6 +190,5 @@ main h2 span{
     padding: 0 10px 0 6px;
     line-height: 1.45;
 }
-
 
 @media screen and (max-width: 650px) {}
