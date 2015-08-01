@@ -15,6 +15,9 @@ body *::-moz-selection{
     color: #222;
 }
 
+*{
+    transition: 0.3s;
+}
 
 body, html{
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -85,6 +88,7 @@ main h2{
     line-height: 0;
     position: relative;
     top: 50%;
+    transition: 0.5s;
 }
 .wrapper h3{
     margin-top: 100%;
@@ -93,14 +97,11 @@ main h2{
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     line-height: 1.2;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .wrapper>p{
     opacity: 0;
-    transition: 0.3s 0.8s;
-}
-.wrapper>p.active{
-    opacity: 1; 
+    transition: 0.3s;
 }
 .wrapper:hover div{
     top: -10%;
@@ -109,7 +110,6 @@ main h2{
 .wrapper:hover h3{
     margin-top: 25%;
 }
-
 
 /*the UNICLO CALENDAR*/
 
@@ -138,3 +138,56 @@ main h2{
     line-height: 60px;
     color: white;
 }
+
+/*after clicking the number*/
+
+header{
+    opacity: 0;
+}
+.hungry_div{
+    top: 50%;
+    -webkit-transform: translateY(-60%);
+    transform: translateY(-60%);
+}
+main h2{
+    font-size: 4rem;
+}
+main h2 span{
+    opacity: 0;
+}
+#list{
+/*    width: 70%;*/
+}
+.wrapper:not(:first-child){
+    padding: 0;
+    transition: 0.3s 1s;
+}
+.wrapper:first-child{
+    opacity: 1;
+    width: 100%;
+    padding-bottom: 40%;
+    background-color: #222;
+}
+.wrapper:first-child div p{
+    left: -45%;
+    top: -50%
+}
+.wrapper:first-child div{
+    top: -10%;
+    opacity: 0;
+}
+.wrapper:first-child h3{
+    margin-top: -20%;
+    font-size: 2rem;
+    left: 8px;
+}
+.wrapper>p{
+    opacity: 1;
+    font-size: 1rem;
+    margin-top: -20%;
+    padding: 0 10px 0 6px;
+    line-height: 1.45;
+}
+
+
+@media screen and (max-width: 650px) {}
