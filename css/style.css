@@ -14,6 +14,12 @@ body *::-moz-selection{
     background-color: white;
     color: #222;
 }
+main {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 *{
     transition: 0.5s;
@@ -91,7 +97,7 @@ main h2{
     line-height: 0;
     position: relative;
     top: 50%;
-    transition: 0.5s;
+    transition: 0.35s ease;
 }
 .wrapper h3{
     margin-top: 100%;
@@ -101,7 +107,7 @@ main h2{
     transform: translateY(-50%);
     line-height: 1.2;
     display: inline-block;
-    transition: margin 0.5s, color 0.22s;
+    transition: margin 0.5s ease;
 }
 .wrapper>p{
     opacity: 0;
@@ -114,6 +120,7 @@ main h2{
 .wrapper:hover h3{
     margin-top: 25%;
     color: #da2467;
+    transition: margin 0.5s ease;
 }
 
 /*used for fake hover triggered by js*/
@@ -124,6 +131,7 @@ main h2{
 }
 .wrapper.hover h3{
     margin-top: 25%;
+    transition: margin 0.5s ease, color 0.22s linear
 }
 
 /*the UNICLO CALENDAR*/
@@ -160,6 +168,9 @@ main h2{
     cursor: pointer;
     width: 160px;
     border-right: 1px solid white;
+}
+#calendar p:first-child:hover{
+    opacity: 0.5;
 }
 
 /*after clicking the number*/
