@@ -29,6 +29,7 @@ body, html{
     font-family: 'helvetica neue', helvetica, arial, sans-serif;
     overflow: hidden;
     color: #222;
+    height: 100%;
 }
 #hungry_div{
     position: absolute;
@@ -87,7 +88,6 @@ main h2{
     height: 100%;
     position: absolute;
     top: 0;
-    transition: 0.5s;
 }
 .wrapper div p:first-child{
     display: block;
@@ -111,7 +111,6 @@ main h2{
 }
 .wrapper>p{
     opacity: 0;
-    transition: 0.5s;
 }
 .wrapper:hover div{
     top: -10%;
@@ -148,14 +147,13 @@ main h2{
     width: 60px;
     height: 420px;
     line-height: 0;
-    transition: 0.5s;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 #calendar:hover{
     height: 360px;
     width: 160px;
     top: 0;
-    box-shadow: rgba(0,0,0,0.35) 0 6px 13px;
+    box-shadow: rgba(0,0,0,0.4) 0 0 40px;
 }
 #calendar p{
     text-align: center;
@@ -206,7 +204,6 @@ main.activate h2 span{
 .wrapper.activate div p{
     left: -45%;
     top: -50%;
-    transition: 0.5s;
 }
 .wrapper.activate div{
     top: -10%;
@@ -226,4 +223,22 @@ main.activate h2 span{
     line-height: 1.45;
 }
 
-@media screen and (max-width: 650px) {}
+@media screen and (max-width: 650px) {
+    body, html, #hungry_div{
+        font-size: 0.7rem;
+    }
+    h1+p{
+        font-size: 1.5rem;
+    }
+    #calendar{
+        top: -345px;
+        width: 40px;
+        height: 385px;
+    }
+    #calendar p{
+        line-height: 40px;
+    }
+    #calendar p:first-child{
+        line-height: 25px;
+    }
+}
