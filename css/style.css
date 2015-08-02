@@ -14,7 +14,7 @@ body *::-moz-selection{
     background-color: white;
     color: #222;
 }
-main {
+main, .buttons{
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -177,13 +177,6 @@ main h2{
 header.activate{
     opacity: 0;
 }
-/*
-#hungry_div.activate{
-    top: 50%;
-    -webkit-transform: translateY(-60%);
-    transform: translateY(-60%);
-}
-*/
 main.activate h2{
     font-size: 4rem;
 }
@@ -226,9 +219,32 @@ main.activate h2 span{
     line-height: 1.45;
     transition: margin 0.9s ease-in-out;
 }
-
-.current{
-    color: antiquewhite;
+.buttons{
+    width: 40px;
+    margin: 5px auto;
+    position: relative;
+    left: 290px;
+}
+.buttons.hidden{
+    pointer-events: none;
+    opacity: 0;
+}
+#prev, #next{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(255,255,255,0);
+    font-size: 1em;
+    cursor: pointer;
+}
+#prev{
+    float: left;
+}
+#next{
+    float: right;
+}
+button:focus {
+    outline: none;
 }
 
 @media screen and (max-width: 650px) {
@@ -251,5 +267,10 @@ main.activate h2 span{
     }
     #calendar p:first-child{
         line-height: 25px;
+    }
+    .buttons{
+        position: static;
+        float: right;
+        margin-right: 30px;
     }
 }
