@@ -15,13 +15,8 @@ var main = function() {
         $(this).removeClass("hover");
         $(this).toggleClass("current");
     };
-//    var close = function() {
-//            $(".wrapper").not(this).removeClass("hidden");
-//            $(this).removeClass("current");
-//        };
     $(wrapper).click(toggleTitle);
     $(wrapper).click(openClose);
-//    $(closed).click(open);
     
     var next = function() {
         var currentSlide = $(".current");
@@ -49,6 +44,5 @@ var main = function() {
     };
     $("#prev").click(previous);
 };
-                       
 
 $(document).ready(main);
