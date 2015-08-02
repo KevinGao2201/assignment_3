@@ -73,6 +73,7 @@ main h2{
     background-color: #222;
     color: white;
     transition: none;
+    cursor: pointer;
 }
 .wrapper div{
     display: block;
@@ -100,7 +101,7 @@ main h2{
     transform: translateY(-50%);
     line-height: 1.2;
     display: inline-block;
-    transition: 0.5s;
+    transition: margin 0.5s, color 0.15s;
 }
 .wrapper>p{
     opacity: 0;
@@ -112,6 +113,7 @@ main h2{
 }
 .wrapper:hover h3{
     margin-top: 25%;
+    color: #da2467;
 }
 
 /*used for fake hover triggered by js*/
@@ -194,6 +196,8 @@ main.activate h2 span{
     margin-top: -20%;
     font-size: 2rem;
     left: 8px;
+    color: #da2467;
+    color: #da2467;
 }
 .wrapper.activate>p{
     opacity: 1;
