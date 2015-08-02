@@ -12,20 +12,37 @@ function removeCalen() {
 }
 
 window.onload = function() {
-    var wrapper = document.getElementsByClassName("wrapper");
-    for (var i = 0; i < wrapper.length; i++)
-        wrapper[i].onclick = function open() {
+    var body = document.querySelector("body"),
+        wrapper = document.getElementsByClassName("wrapper"),
+        i;
+    for ( i = 0; i < wrapper.length; i++)
+    wrapper[i].onclick = function open() {
         var header = document.querySelector("header"),
             hungry = document.getElementById("hungry_div"),
             main = document.querySelector("main"),
+            nonActiveTile = document.getElementsByClassName("wrapper"),
             activeTile = this;
-//            nonActiveTile = document.getElementById("no_"+i);
         header.classList.toggle("activate");
         hungry.classList.toggle("activate");
         main.classList.toggle("activate");
-        activeTile.classList.toggle("activate");
-        nonActiveTile.classList.toggle("hidden");
+        nonActiveTile.classList.add("hidden");
         nonActiveTile.classList.remove("activate");
+        activeTile.classList.remove("hidden");
+        activeTile.classList.toggle("activate");
+    }
+    body.onclick = function close() {
+        var header = document.querySelector("header"),
+            hungry = document.getElementById("hungry_div"),
+            main = document.querySelector("main"),
+            nonActiveTile = document.getElementsByClassName("wrapper"),
+            activeTile = document.getElementsByClassName("wrapper");
+        header.classList.remove("activate");
+        hungry.classList.remove("activate");
+        main.classList.remove("activate");
+        nonActiveTile.classList.remove("hidden");
+        nonActiveTile.classList.remove("activate");
+        activeTile.classList.remove("hidden");
+        activeTile.classList.remove("activate");
     }
 }
 

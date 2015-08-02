@@ -140,7 +140,7 @@ main h2{
     width: 60px;
     height: 420px;
     line-height: 0;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 #calendar:hover{
     height: 360px;
