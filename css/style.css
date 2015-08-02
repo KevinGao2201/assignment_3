@@ -36,6 +36,7 @@ body, html{
     width: 100%;
     -webkit-transform: translateY(-55%);
     transform: translateY(-55%);
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 header{
     display: block;
@@ -57,7 +58,6 @@ main{
     width: 95%;
     max-width: 960px;
     margin: auto;
-    -webkit-font-smoothing: subpixel-antialiased;
 }
 main h2{
     margin-bottom: 10px;
@@ -149,6 +149,7 @@ main h2{
     height: 420px;
     line-height: 0;
     transition: 0.5s;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 #calendar:hover{
     height: 360px;
