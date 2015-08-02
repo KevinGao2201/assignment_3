@@ -111,6 +111,7 @@ main h2{
 }
 .wrapper>p{
     opacity: 0;
+    max-width: 700px;
 }
 .wrapper:hover div{
     top: -10%;
@@ -130,7 +131,7 @@ main h2{
 }
 .wrapper.hover h3{
     margin-top: 25%;
-    transition: margin 0.5s ease, color 0.22s linear
+    transition: margin 0.5s ease, color 0.22s linear;
 }
 
 /*the UNICLO CALENDAR*/
@@ -188,6 +189,7 @@ main.activate h2{
 }
 main.activate h2 span{
     opacity: 0;
+    font-size: 1rem;
 }
 .wrapper.hidden{
     padding: 0;
@@ -222,6 +224,9 @@ main.activate h2 span{
     padding: 0 10px 0 6px;
     line-height: 1.45;
 }
+.wrapper.activate h3, .wrapper.activate>p{
+    transition: margin 0.6s ease-in-out;
+}
 
 @media screen and (max-width: 650px) {
     body, html, #hungry_div{
@@ -234,6 +239,9 @@ main.activate h2 span{
         top: -345px;
         width: 40px;
         height: 385px;
+    }
+    #calendar:hover{
+        height: 350px;
     }
     #calendar p{
         line-height: 40px;
