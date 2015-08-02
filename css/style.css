@@ -113,7 +113,7 @@ main h2{
 }
 .wrapper:hover h3{
     margin-top: 25%;
-    color: #da2467;
+    color: #E84083;
 }
 
 /*used for fake hover triggered by js*/
@@ -196,8 +196,7 @@ main.activate h2 span{
     margin-top: -20%;
     font-size: 2rem;
     left: 8px;
-    color: #da2467;
-    color: #da2467;
+    color: #E84083;
 }
 .wrapper.activate>p{
     opacity: 1;
