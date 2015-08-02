@@ -189,7 +189,7 @@ main.activate h2{
 }
 main.activate h2 span{
     opacity: 0;
-    font-size: 1rem;
+/*    font-size: 1rem;*/
 }
 .wrapper.hidden{
     padding: 0;
