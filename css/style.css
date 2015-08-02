@@ -156,11 +156,13 @@ main h2{
 header.activate{
     opacity: 0;
 }
+/*
 #hungry_div.activate{
     top: 50%;
     -webkit-transform: translateY(-60%);
     transform: translateY(-60%);
 }
+*/
 main.activate h2{
     font-size: 4rem;
 }
