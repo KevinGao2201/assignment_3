@@ -24,7 +24,7 @@ body, html{
     overflow: hidden;
     color: #222;
 }
-.hungry_div{
+#hungry_div{
     position: absolute;
     top: 50%;
     width: 100%;
@@ -156,12 +156,12 @@ main h2{
 header.activate{
     opacity: 0;
 }
-.hungry_div.activate{
+#hungry_div.activate{
     top: 50%;
     -webkit-transform: translateY(-60%);
     transform: translateY(-60%);
 }
-main. h2{
+main.activate h2{
     font-size: 4rem;
 }
 main.activate h2 span{
@@ -200,7 +200,5 @@ main.activate h2 span{
     padding: 0 10px 0 6px;
     line-height: 1.45;
 }
-.dada{
-    color: red;
-}
+
 @media screen and (max-width: 650px) {}
