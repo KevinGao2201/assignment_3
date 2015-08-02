@@ -51,6 +51,7 @@ main{
     width: 95%;
     max-width: 960px;
     margin: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 main h2{
     margin-bottom: 10px;
@@ -110,6 +111,16 @@ main h2{
     opacity: 0;
 }
 .wrapper:hover h3{
+    margin-top: 25%;
+}
+
+/*used for fake hover triggered by js*/
+
+.wrapper.hover div{
+    top: -10%;
+    opacity: 0;
+}
+.wrapper.hover h3{
     margin-top: 25%;
 }
 
@@ -189,5 +200,7 @@ main.activate h2 span{
     padding: 0 10px 0 6px;
     line-height: 1.45;
 }
-
+.dada{
+    color: red;
+}
 @media screen and (max-width: 650px) {}
