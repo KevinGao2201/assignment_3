@@ -16,7 +16,7 @@ body *::-moz-selection{
 }
 
 *{
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 body, html{
@@ -81,7 +81,7 @@ main h2{
     height: 100%;
     position: absolute;
     top: 0;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .wrapper div p:first-child{
     display: block;
@@ -101,11 +101,11 @@ main h2{
     transform: translateY(-50%);
     line-height: 1.2;
     display: inline-block;
-    transition: margin 0.5s, color 0.15s;
+    transition: margin 0.5s, color 0.22s;
 }
 .wrapper>p{
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 .wrapper:hover div{
     top: -10%;
@@ -128,30 +128,38 @@ main h2{
 
 /*the UNICLO CALENDAR*/
 
-#calendar{
+#calendar.hidden{
     display: none;
 }
 #calendar{
     position: absolute;
-    top: -320px;
+    top: -360px;
     right: 0px;
     overflow: hidden;
     background-color: #222;
     width: 60px;
-    height: 380px;
+    height: 420px;
     line-height: 0;
     transition: 0.4s;
 }
 #calendar:hover{
-    height: 320px;
+    height: 360px;
     width: 160px;
     top: 0;
+    box-shadow: rgba(0,0,0,0.35) 0 6px 13px;
 }
 #calendar p{
     text-align: center;
     font-size: 0.75rem;
     line-height: 60px;
+    text-align: center;
     color: white;
+}
+#calendar p:first-child{
+    line-height: 40px;
+    cursor: pointer;
+    width: 160px;
+    border-right: 1px solid white;
 }
 
 /*after clicking the number*/
@@ -186,7 +194,7 @@ main.activate h2 span{
 .wrapper.activate div p{
     left: -45%;
     top: -50%;
-    transition: 0.3s 1.3s;
+    transition: 0.5s;
 }
 .wrapper.activate div{
     top: -10%;
