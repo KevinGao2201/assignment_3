@@ -214,7 +214,7 @@ main.activate h2 span{
 .wrapper.current>p{
     opacity: 1;
     font-size: 1rem;
-    margin-top: -20%;
+    margin-top: -23%;
     padding: 0 10px 0 6px;
     line-height: 1.45;
     transition: margin 0.9s ease-in-out;
