@@ -81,7 +81,7 @@ main h2{
     color: white;
     transition: none;
     cursor: pointer;
-    transition: ease-in-out;
+    transition: ease-out;
 }
 .wrapper div{
     display: block;
