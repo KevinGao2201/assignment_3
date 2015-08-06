@@ -1,0 +1,324 @@
+@import "default.scss";
+
+
+$theme_color: #222;
+
+body *::selection{
+    background-color: $theme_color;
+    color: white;
+}
+body *::-moz-selection{
+    background-color: $theme_color;
+    color: white;
+}
+.wrapper *::selection{
+    background-color: white;
+    color: $theme_color;
+}
+.wrapper *::-moz-selection{
+    background-color: white;
+    color: $theme_color;
+}
+main, .buttons{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*{
+    transition: 0.5s;
+}
+
+body, html{
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    overflow: hidden;
+    color: $theme_color;
+    height: 100%;
+}
+
+#hungry_div{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+header{
+    display: block;
+    width: 95%;
+    max-width: 960px;
+    margin: 0 auto 30px;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    
+    +p{
+        font-weight: 700;
+        font-size: 1.5em;
+        position: relative;
+        left: 3px;
+    }
+}
+
+main{
+    width: 95%;
+    max-width: 960px;
+    margin: auto;
+    
+    h2{
+        margin-bottom: 10px;
+    }
+}
+
+#list{
+    margin: 0 -9999rem;
+    /* add back negative margin value */
+    padding: 0 9999rem 40%;
+    background: $theme_color;
+    color: white;
+}
+
+.wrapper{
+    position: relative;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    overflow: hidden;
+    float: left;
+    background-color: $theme_color;
+    color: white;
+    transition: none;
+    cursor: pointer;
+    transition: ease-out;
+    
+    div{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        
+        p:first-child{
+            display: block;
+            text-align: center;
+            font-size: 5rem;
+            font-weight: 100;
+            line-height: 0;
+            position: relative;
+            top: 50%;
+            transition: 0.35s ease;
+        }
+    }
+    
+    h3{
+        margin-top: 100%;
+        position: relative;
+        padding-top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        line-height: 1.2;
+        display: inline-block;
+        transition: margin 0.5s ease;
+    }
+    
+    >p{
+        opacity: 0;
+        max-width: 700px;
+    }
+    
+    &:hover{
+        div{
+            top: -10%;
+            opacity: 0;
+        }
+        
+        h3{
+            margin-top: 25%;
+            color: #da2467;
+            transition: margin 0.5s ease;
+        }
+    }
+}
+
+/*used for fake hover triggered by js*/
+
+.wrapper.hover{
+    div{
+        top: -10%;
+        opacity: 0;
+    }
+    
+    h3{
+        margin-top: 25%;
+        transition: margin 0.5s ease, color 0.22s linear;
+    }
+}
+
+/*the UNICLO CALENDAR*/
+
+#calendar.hidden{
+    display: none;
+}
+#calendar{
+    position: absolute;
+    top: -360px;
+    right: 0px;
+    overflow: hidden;
+    background-color: $theme_color;
+    width: 60px;
+    height: 420px;
+    line-height: 0;
+    -webkit-font-smoothing: subpixel-antialiased;
+    
+    &:hover{
+        height: 360px;
+        width: 160px;
+        top: 0;
+        box-shadow: rgba(0,0,0,0.4) 0 0 40px;
+    }
+    
+    p{
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 60px;
+        text-align: center;
+        color: white;
+    }
+    
+    p:first-child{
+        line-height: 40px;
+        cursor: pointer;
+        width: 160px;
+        border-right: 1px solid white;
+        
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+
+
+/*after clicking the number*/
+header.activate{
+    opacity: 0;
+}
+
+main.activate h2{
+    font-size: 4rem;
+}
+
+main.activate h2 span{
+    opacity: 0;
+/*    font-size: 1rem;*/
+}
+
+.wrapper.hidden{
+    padding: 0;
+    width: 0;
+    opacity: 0;
+    display: none;
+}
+
+.wrapper.current{
+    opacity: 1;
+    width: 100%;
+    padding-bottom: 40%;
+    background-color: $theme_color;
+    
+    div{
+        top: -10%;
+        opacity: 0;
+        
+        p{
+            left: -45%;
+            top: -50%;
+        }
+    }
+    
+    h3{
+        margin-top: -20%;
+        font-size: 2rem;
+        left: 8px;
+        color: #da2467;
+        transition: margin 0.7s ease-in-out;
+    }
+    
+    >p{
+        opacity: 1;
+        font-size: 1rem;
+        margin-top: -23%;
+        padding: 0 10px 0 6px;
+        line-height: 1.45;
+        transition: margin 0.9s ease-in-out;
+    }
+}
+
+.buttons{
+    width: 40px;
+    margin: 5px auto;
+    position: relative;
+    left: 290px;
+}
+
+.buttons.hidden{
+    pointer-events: none;
+    opacity: 0;
+}
+
+#prev, #next{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(255,255,255,0);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#prev{
+    float: left;
+}
+
+#next{
+    float: right;
+}
+
+button:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 650px) {
+    body, html, #hungry_div{
+        font-size: 0.7rem;
+    }
+    h1+p{
+        font-size: 1.5rem;
+    }
+    #calendar{
+        top: -345px;
+        width: 40px;
+        height: 385px;
+        
+        &:hover{
+            height: 350px;
+        }
+        
+        p{
+            line-height: 40px;
+            
+            &:first-child{
+                line-height: 25px;
+            }
+        }
+    }
+    
+    .buttons{
+        position: static;
+        float: right;
+        margin-right: 30px;
+    }
+}

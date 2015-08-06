@@ -1,277 +1,401 @@
-body *::selection{
-    background-color: #222;
-    color: white;
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
-body *::-moz-selection{
-    background-color: #222;
-    color: white;
+
+body {
+  line-height: 1;
 }
-.wrapper *::selection{
-    background-color: white;
-    color: #222;
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-.wrapper *::-moz-selection{
-    background-color: white;
-    color: #222;
+
+nav ul {
+  list-style: none;
 }
-main, .buttons{
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+body *::selection {
+  background-color: #222;
+  color: white;
+}
+
+body *::-moz-selection {
+  background-color: #222;
+  color: white;
+}
+
+.wrapper *::selection {
+  background-color: white;
+  color: #222;
+}
+
+.wrapper *::-moz-selection {
+  background-color: white;
+  color: #222;
+}
+
+main, .buttons {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
 
-*{
-    transition: 0.5s;
+* {
+  transition: 0.5s;
 }
 
-body, html{
-    font-family: 'helvetica neue', helvetica, arial, sans-serif;
-    overflow: hidden;
-    color: #222;
-    height: 100%;
+body, html {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  overflow: hidden;
+  color: #222;
+  height: 100%;
 }
-#hungry_div{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    -webkit-transform: translateY(-55%);
-    transform: translateY(-55%);
-    -webkit-font-smoothing: subpixel-antialiased;
+
+#hungry_div {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-55%);
+  transform: translateY(-55%);
+  -webkit-font-smoothing: subpixel-antialiased;
 }
-header{
-    display: block;
-    width: 95%;
-    max-width: 960px;
-    margin: 0 auto 30px;
+
+header {
+  display: block;
+  width: 95%;
+  max-width: 960px;
+  margin: 0 auto 30px;
 }
-h1{
-    font-size: 3rem;
-    margin-bottom: 10px;
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
-h1+p{
-    font-weight: 700;
-    font-size: 1.5em;
-    position: relative;
-    left: 3px;
+h1 + p {
+  font-weight: 700;
+  font-size: 1.5em;
+  position: relative;
+  left: 3px;
 }
-main{
-    width: 95%;
-    max-width: 960px;
-    margin: auto;
+
+main {
+  width: 95%;
+  max-width: 960px;
+  margin: auto;
 }
-main h2{
-    margin-bottom: 10px;
+main h2 {
+  margin-bottom: 10px;
 }
-#list{
-    margin: 0 -9999rem;
-    /* add back negative margin value */
-    padding: 0 9999rem 40%;
-    background: #222;
-    color: white;
+
+#list {
+  margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0 9999rem 40%;
+  background: #222;
+  color: white;
 }
-.wrapper{
-    position: relative;
-    width: 20%;
-    height: 0;
-    padding-bottom: 20%;
-    overflow: hidden;
-    float: left;
-    background-color: #222;
-    color: white;
-    transition: none;
-    cursor: pointer;
-    transition: ease-out;
+
+.wrapper {
+  position: relative;
+  width: 20%;
+  height: 0;
+  padding-bottom: 20%;
+  overflow: hidden;
+  float: left;
+  background-color: #222;
+  color: white;
+  transition: none;
+  cursor: pointer;
+  transition: ease-out;
 }
-.wrapper div{
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
+.wrapper div {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
-.wrapper div p:first-child{
-    display: block;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 100;
-    line-height: 0;
-    position: relative;
-    top: 50%;
-    transition: 0.35s ease;
+.wrapper div p:first-child {
+  display: block;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 100;
+  line-height: 0;
+  position: relative;
+  top: 50%;
+  transition: 0.35s ease;
 }
-.wrapper h3{
-    margin-top: 100%;
-    position: relative;
-    padding-top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    line-height: 1.2;
-    display: inline-block;
-    transition: margin 0.5s ease;
+.wrapper h3 {
+  margin-top: 100%;
+  position: relative;
+  padding-top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  line-height: 1.2;
+  display: inline-block;
+  transition: margin 0.5s ease;
 }
-.wrapper>p{
-    opacity: 0;
-    max-width: 700px;
+.wrapper > p {
+  opacity: 0;
+  max-width: 700px;
 }
-.wrapper:hover div{
-    top: -10%;
-    opacity: 0;
+.wrapper:hover div {
+  top: -10%;
+  opacity: 0;
 }
-.wrapper:hover h3{
-    margin-top: 25%;
-    color: #da2467;
-    transition: margin 0.5s ease;
+.wrapper:hover h3 {
+  margin-top: 25%;
+  color: #da2467;
+  transition: margin 0.5s ease;
 }
 
 /*used for fake hover triggered by js*/
-
-.wrapper.hover div{
-    top: -10%;
-    opacity: 0;
+.wrapper.hover div {
+  top: -10%;
+  opacity: 0;
 }
-.wrapper.hover h3{
-    margin-top: 25%;
-    transition: margin 0.5s ease, color 0.22s linear;
+.wrapper.hover h3 {
+  margin-top: 25%;
+  transition: margin 0.5s ease, color 0.22s linear;
 }
 
 /*the UNICLO CALENDAR*/
+#calendar.hidden {
+  display: none;
+}
 
-#calendar.hidden{
-    display: none;
+#calendar {
+  position: absolute;
+  top: -360px;
+  right: 0px;
+  overflow: hidden;
+  background-color: #222;
+  width: 60px;
+  height: 420px;
+  line-height: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
-#calendar{
-    position: absolute;
-    top: -360px;
-    right: 0px;
-    overflow: hidden;
-    background-color: #222;
-    width: 60px;
-    height: 420px;
-    line-height: 0;
-    -webkit-font-smoothing: subpixel-antialiased;
+#calendar:hover {
+  height: 360px;
+  width: 160px;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 40px;
 }
-#calendar:hover{
-    height: 360px;
-    width: 160px;
-    top: 0;
-    box-shadow: rgba(0,0,0,0.4) 0 0 40px;
+#calendar p {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 60px;
+  text-align: center;
+  color: white;
 }
-#calendar p{
-    text-align: center;
-    font-size: 0.75rem;
-    line-height: 60px;
-    text-align: center;
-    color: white;
+#calendar p:first-child {
+  line-height: 40px;
+  cursor: pointer;
+  width: 160px;
+  border-right: 1px solid white;
 }
-#calendar p:first-child{
-    line-height: 40px;
-    cursor: pointer;
-    width: 160px;
-    border-right: 1px solid white;
-}
-#calendar p:first-child:hover{
-    opacity: 0.5;
+#calendar p:first-child:hover {
+  opacity: 0.5;
 }
 
 /*after clicking the number*/
-header.activate{
-    opacity: 0;
+header.activate {
+  opacity: 0;
 }
-main.activate h2{
-    font-size: 4rem;
+
+main.activate h2 {
+  font-size: 4rem;
 }
-main.activate h2 span{
-    opacity: 0;
-/*    font-size: 1rem;*/
+
+main.activate h2 span {
+  opacity: 0;
+  /*    font-size: 1rem;*/
 }
-.wrapper.hidden{
-    padding: 0;
-    width: 0;
-    opacity: 0;
-    display: none;
+
+.wrapper.hidden {
+  padding: 0;
+  width: 0;
+  opacity: 0;
+  display: none;
 }
-.wrapper.current{
-    opacity: 1;
-    width: 100%;
-    padding-bottom: 40%;
-    background-color: #222;
+
+.wrapper.current {
+  opacity: 1;
+  width: 100%;
+  padding-bottom: 40%;
+  background-color: #222;
 }
-.wrapper.current div p{
-    left: -45%;
-    top: -50%;
+.wrapper.current div {
+  top: -10%;
+  opacity: 0;
 }
-.wrapper.current div{
-    top: -10%;
-    opacity: 0;
+.wrapper.current div p {
+  left: -45%;
+  top: -50%;
 }
-.wrapper.current h3{
-    margin-top: -20%;
-    font-size: 2rem;
-    left: 8px;
-    color: #da2467;
-    transition: margin 0.7s ease-in-out;
+.wrapper.current h3 {
+  margin-top: -20%;
+  font-size: 2rem;
+  left: 8px;
+  color: #da2467;
+  transition: margin 0.7s ease-in-out;
 }
-.wrapper.current>p{
-    opacity: 1;
-    font-size: 1rem;
-    margin-top: -23%;
-    padding: 0 10px 0 6px;
-    line-height: 1.45;
-    transition: margin 0.9s ease-in-out;
+.wrapper.current > p {
+  opacity: 1;
+  font-size: 1rem;
+  margin-top: -23%;
+  padding: 0 10px 0 6px;
+  line-height: 1.45;
+  transition: margin 0.9s ease-in-out;
 }
-.buttons{
-    width: 40px;
-    margin: 5px auto;
-    position: relative;
-    left: 290px;
+
+.buttons {
+  width: 40px;
+  margin: 5px auto;
+  position: relative;
+  left: 290px;
 }
-.buttons.hidden{
-    pointer-events: none;
-    opacity: 0;
+
+.buttons.hidden {
+  pointer-events: none;
+  opacity: 0;
 }
-#prev, #next{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: rgba(255,255,255,0);
-    font-size: 1em;
-    cursor: pointer;
+
+#prev, #next {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0);
+  font-size: 1em;
+  cursor: pointer;
 }
-#prev{
-    float: left;
+
+#prev {
+  float: left;
 }
-#next{
-    float: right;
+
+#next {
+  float: right;
 }
+
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 @media screen and (max-width: 650px) {
-    body, html, #hungry_div{
-        font-size: 0.7rem;
-    }
-    h1+p{
-        font-size: 1.5rem;
-    }
-    #calendar{
-        top: -345px;
-        width: 40px;
-        height: 385px;
-    }
-    #calendar:hover{
-        height: 350px;
-    }
-    #calendar p{
-        line-height: 40px;
-    }
-    #calendar p:first-child{
-        line-height: 25px;
-    }
-    .buttons{
-        position: static;
-        float: right;
-        margin-right: 30px;
-    }
+  body, html, #hungry_div {
+    font-size: 0.7rem;
+  }
+
+  h1 + p {
+    font-size: 1.5rem;
+  }
+
+  #calendar {
+    top: -345px;
+    width: 40px;
+    height: 385px;
+  }
+  #calendar:hover {
+    height: 350px;
+  }
+  #calendar p {
+    line-height: 40px;
+  }
+  #calendar p:first-child {
+    line-height: 25px;
+  }
+
+  .buttons {
+    position: static;
+    float: right;
+    margin-right: 30px;
+  }
 }
