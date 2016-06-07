@@ -59,7 +59,7 @@ h1{
     
     +p{
         font-weight: 700;
-        font-size: 1.5em;
+        font-size: 1rem;
         position: relative;
         left: 3px;
     }
@@ -71,16 +71,23 @@ main{
     margin: auto;
     
     h2{
+        font-size: 2rem;
         margin-bottom: 10px;
+        
+        span{
+            transition: all 0.5s ease-in-out;
+            transition-delay: none;
+        }
     }
 }
 
 #list{
-    margin: 0 -9999rem;
+    margin: 0 calc(50% - 50vw);
     /* add back negative margin value */
-    padding: 0 9999rem 40%;
+    padding: 0 calc(50vw - 50%) 40%;
     background: $theme_color;
     color: white;
+    transition: none;
 }
 
 .wrapper{
@@ -202,19 +209,43 @@ main{
     }
 }
 
+/*back to kevin 2201*/
+.back_to_2201{
+    margin-top: 10px;
+    height: 0;
+    
+    a{
+        color: $theme_color;
+        text-decoration: none;
+        font-size: 13px;
+        font-family: 'acumin pro', acumin-pro, 'helvetica neue', helvetica, arial, sans-serif;
+        
+        &:hover{
+            color: #888;
+        }
+    }
+}
+
 
 /*after clicking the number*/
 header.activate{
     opacity: 0;
 }
 
-main.activate h2{
-    font-size: 4rem;
-}
-
-main.activate h2 span{
-    opacity: 0;
-/*    font-size: 1rem;*/
+main.activate{
+    h2{
+        font-size: 4rem;
+        
+        span{
+            opacity: 0;
+            font-size: 4rem;
+        }
+    }
+    
+    .back_to_2201{
+        opacity: 0;
+        overflow: hidden;
+    }
 }
 
 .wrapper.hidden{
